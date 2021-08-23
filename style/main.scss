@@ -15,4 +15,67 @@ $very-light-gray: hsl(0, 0%, 95%);
 body {
     font-family: "Big Shoulders Display", cursive;
     font-family: "Lexend Deca", sans-serif;
+    background-color: $transparent-white;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    main {
+        max-width: 900px;
+        // outline: 1px solid red;
+        border-radius: 1rem;
+        overflow: hidden;
+        display: flex;
+        flex-direction: row;
+        .card.first {
+            background-color: $bright-orange;
+            .btn {
+                color: $bright-orange;
+            }
+        }
+        .card.second {
+            background-color: $dark-cyan;
+            .btn {
+                color: $dark-cyan;
+            }
+        }
+        .card.third {
+            background-color: $very-dark-cyan;
+            .btn {
+                color: $very-dark-cyan;
+            }
+        }
+        .card {
+            padding: 3rem;
+            .icon_svg {
+                margin-bottom: 3rem;
+            }
+            .name {
+                font-size: 2rem;
+                font-family: "Big Shoulders Display";
+                font-weight: 700;
+                color: $very-light-gray;
+                margin-bottom: 3rem;
+            }
+            .subtitle {
+                font-size: 1rem;
+                font-family: "Lexend Deca";
+                font-weight: 400;
+                color: $transparent-white;
+                margin-bottom: 3rem;
+            }
+            .btn {
+                padding: 1rem 2rem;
+                background-color: $very-light-gray;
+                border: none;
+                outline: none;
+                font-size: 1rem;
+                font-family: "Lexend Deca";
+                font-weight: 400;
+                border-radius: 2rem;
+            }
+        }
+    }
 }
