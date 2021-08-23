@@ -12,7 +12,7 @@ body {
   font-family: "Lexend Deca", sans-serif;
   background-color: rgba(255, 255, 255, 0.75);
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -41,12 +41,26 @@ body main {
           flex-direction: row;
 }
 
+@media (max-width: 960px) {
+  body main {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    max-width: 300px;
+  }
+}
+
 body main .card.first {
   background-color: #e38826;
 }
 
 body main .card.first .btn {
   color: #e38826;
+}
+
+body main .card.first .btn:hover {
+  background-color: #e38826;
 }
 
 body main .card.second {
@@ -57,12 +71,20 @@ body main .card.second .btn {
   color: #006970;
 }
 
+body main .card.second .btn:hover {
+  background-color: #006970;
+}
+
 body main .card.third {
   background-color: #004241;
 }
 
 body main .card.third .btn {
   color: #004241;
+}
+
+body main .card.third .btn:hover {
+  background-color: #004241;
 }
 
 body main .card {
@@ -92,11 +114,16 @@ body main .card .subtitle {
 body main .card .btn {
   padding: 1rem 2rem;
   background-color: #f2f2f2;
-  border: none;
+  border: 2px solid #f2f2f2;
   outline: none;
   font-size: 1rem;
   font-family: "Lexend Deca";
   font-weight: 400;
   border-radius: 2rem;
+  cursor: pointer;
+}
+
+body main .card .btn:hover {
+  color: #f2f2f2;
 }
 /*# sourceMappingURL=main.css.map */

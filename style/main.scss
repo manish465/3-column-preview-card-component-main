@@ -12,39 +12,53 @@ $very-dark-cyan: hsl(179, 100%, 13%);
 $transparent-white: hsla(0, 0%, 100%, 0.75);
 $very-light-gray: hsl(0, 0%, 95%);
 
+$mobile-view: 960px;
+
 body {
     font-family: "Big Shoulders Display", cursive;
     font-family: "Lexend Deca", sans-serif;
     background-color: $transparent-white;
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     main {
         max-width: 900px;
-        // outline: 1px solid red;
         border-radius: 1rem;
         overflow: hidden;
         display: flex;
         flex-direction: row;
+        @media (max-width: $mobile-view) {
+            flex-direction: column;
+            max-width: 300px;
+        }
         .card.first {
             background-color: $bright-orange;
             .btn {
                 color: $bright-orange;
+                &:hover {
+                    background-color: $bright-orange;
+                }
             }
         }
         .card.second {
             background-color: $dark-cyan;
             .btn {
                 color: $dark-cyan;
+                &:hover {
+                    background-color: $dark-cyan;
+                }
             }
         }
         .card.third {
             background-color: $very-dark-cyan;
             .btn {
                 color: $very-dark-cyan;
+                &:hover {
+                    background-color: $very-dark-cyan;
+                }
             }
         }
         .card {
@@ -69,12 +83,16 @@ body {
             .btn {
                 padding: 1rem 2rem;
                 background-color: $very-light-gray;
-                border: none;
+                border: 2px solid $very-light-gray;
                 outline: none;
                 font-size: 1rem;
                 font-family: "Lexend Deca";
                 font-weight: 400;
                 border-radius: 2rem;
+                cursor: pointer;
+                &:hover {
+                    color: $very-light-gray;
+                }
             }
         }
     }
