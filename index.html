@@ -11,7 +11,12 @@
             sizes="32x32"
             href="./images/favicon-32x32.png"
         />
-
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap"
+            rel="stylesheet"
+        />
         <title>Frontend Mentor | 3-column preview card component</title>
 
         <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -24,10 +29,11 @@
                 color: hsl(228, 45%, 44%);
             }
         </style>
+        <link rel="stylesheet" href="/style/css/main.css" />
     </head>
     <body>
         <main>
-            <section class="card">
+            <section class="card first">
                 <img
                     src="/images/icon-sedans.svg"
                     alt="sedan"
@@ -41,7 +47,7 @@
                 </p>
                 <button class="btn">Learn More</button>
             </section>
-            <section class="card">
+            <section class="card second">
                 <img src="/images/icon-suvs.svg" alt="suv" class="icon_svg" />
                 <h2 class="name">SUVS</h2>
                 <p class="subtitle">
@@ -51,7 +57,7 @@
                 </p>
                 <button class="btn">Learn More</button>
             </section>
-            <section class="card">
+            <section class="card third">
                 <img
                     src="/images/icon-luxury.svg"
                     alt="luxury"
